@@ -13,6 +13,15 @@ const Navbar = () => {
     // For simplicity, we will just change the background color of the body
     document.body.classList.toggle('clicked', newTheme === 'dark');
   };
+  function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("/light.png")) {
+        image.src = "/moon.png";
+        console.log("Working")
+    } else {
+        image.src = "/light.png";
+    }
+}
   return (
     <header className={`Flex `}>
       <nav className="flex justify-around items-center font-serif font-bold">
@@ -42,7 +51,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="cursor-pointer hover:cursor-pointer" onClick={toggleTheme}>
-              <Image src={toggleTheme ? "/light.png" : "/moon.png"} alt="Language Icon" width={25} height={20} />
+              <Image id='myImage' src='/light.png' alt="Language Icon" width={25} height={20} onClick={changeImage} />
             </li>
           </ul>
         </div>
