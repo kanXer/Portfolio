@@ -8,7 +8,7 @@ export default function Resume() {
         <div>
           <Navbar />
             <div className="flex justify-around items-center" >
-              <embed src="lala.pdf" type="application/pdf" width="1095px" height="900px" />
+              <embed src="Sahil_Srivastav.pdf" type="application/pdf" width="1095px" height="900px" />
             </div>
         </div>
     );
