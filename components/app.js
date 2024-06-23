@@ -13,7 +13,7 @@ export default function App() {
         setSpanText(spanText === "My Website" ? "Sahil Srivastava" : "My Website");
 
         // Call the function again after 500 milliseconds
-        setTimeout(changeText, 500);
+        setTimeout(changeText, 30000);
     };
     
     // useEffect to start the text change loop on component mount
