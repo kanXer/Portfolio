@@ -5,17 +5,21 @@ import Image from 'next/image';
 import { useState } from 'react';
 const Navbar = () => {
 
+
   const [theme, setTheme] = useState('light');
-  const [imageSrc, setImageSrc] = useState('/ moon.png');
+  const [imageSrc, setImageSrc] = useState('/moon.png');
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
-    setImageSrc(newTheme === 'light' ? '/moon.png' : '/light.png');
     
+    // Update imageSrc based on the theme
+    setImageSrc(newTheme === 'light' ? '/moon.png' : '/light.png');
+
     // Additional theme-specific changes if needed
     document.body.classList.toggle('clicked', newTheme === 'dark');
   };
+
 
   return (
     <header className={`Flex`}>
