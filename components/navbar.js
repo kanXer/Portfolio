@@ -6,7 +6,7 @@ import { useState } from 'react';
 const Navbar = () => {
 
   const [theme, setTheme] = useState('light');
-  const [imageSrc, setImageSrc] = useState('/moon.png');
+  const [imageSrc, setImageSrc] = useState('/ moon.png');
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
